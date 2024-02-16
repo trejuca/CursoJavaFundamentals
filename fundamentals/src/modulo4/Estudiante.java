@@ -1,18 +1,49 @@
-package modulo4;
+package mx.org.banxico.cursojava.modulo4;
 
+// Javabeans
+// POJOs (Plain Old Java Object)
+// Entity
 public class Estudiante {
 
-	private Integer id;
-	private String nombre;
-	private String primerApellido;
-	private String segundoApellido;
-	private Integer calificacion;
+	String matricula;
+	String nombre;
+	String primerApellido;
+	int edad;
+	int calificacion;
 	
-	public Integer getId() {
-		return id;
+	// Es un metodo para poder
+	// inicializar el objeto
+	public Estudiante() {
+		
 	}
-	public void setId(Integer id) {
-		this.id = id;
+	
+	public Estudiante(
+			String matricula, 
+			String nombre, 
+			String primerApellido, 
+			int edad, 
+			int calificacion) {
+
+		this.matricula = matricula;
+		this.nombre = nombre;
+		this.primerApellido = primerApellido;
+		this.edad = edad;
+		this.calificacion = calificacion;
+	}
+
+
+	public int calcularCalificacion() {
+		// Se hace un casteo de un valor 
+		// double a un valor entero; es decir,
+		// se crea una copia
+		return (int)(Math.random() * 10);
+	}
+	
+	public String getMatricula() {
+		return matricula;
+	}
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
 	}
 	public String getNombre() {
 		return nombre;
@@ -26,25 +57,22 @@ public class Estudiante {
 	public void setPrimerApellido(String primerApellido) {
 		this.primerApellido = primerApellido;
 	}
-	public String getSegundoApellido() {
-		return segundoApellido;
+	public int getEdad() {
+		return edad;
 	}
-	public void setSegundoApellido(String segundoApellido) {
-		this.segundoApellido = segundoApellido;
+	public void setEdad(int edad) {
+		this.edad = edad;
 	}
-	
-	public Integer getCalificacion() {
+	public int getCalificacion() {
 		return calificacion;
 	}
-	public void setCalificacion(Integer calificacion) {
+	public void setCalificacion(int calificacion) {
 		this.calificacion = calificacion;
 	}
 	@Override
 	public String toString() {
-		return "Estudiante [id=" + id + ", nombre=" + nombre + ", primerApellido=" + primerApellido
-				+ ", segundoApellido=" + segundoApellido + "]";
+		return "Estudiante [matricula=" + matricula + ", nombre=" + nombre + ", primerApellido=" + primerApellido
+				+ ", edad=" + edad + ", calificacion=" + calificacion + "]";
 	}
-	public int calcularPromedio(int sumaCalificacion, int materias) {
-		return sumaCalificacion / materias;
-	}
+	
 }
