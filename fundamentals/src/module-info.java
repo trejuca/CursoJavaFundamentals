@@ -1,2 +1,2 @@
-module jfun {
+module CursoJavaFundamentals {
 }
