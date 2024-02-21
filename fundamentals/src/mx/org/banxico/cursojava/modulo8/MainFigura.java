@@ -4,13 +4,15 @@ public class MainFigura {
 
 	public static void main(String[] args) {
 		
-		Figura figura = new Figura();
-		figura.setArea(0.0);
-		figura.setPerimetro(0.0);
-		System.out.println("####### Figura #######");
-		System.out.println("Area: " + figura.calcularArea());
-		System.out.println("Perimetro: " + figura.calcularPerimetro());
-		System.out.println();
+//		Figura figura = new Figura(12.0,12.0);
+//		figura.setArea(0.0);
+//		figura.setPerimetro(0.0);
+//		System.out.println("####### Figura #######");
+//		System.out.println("Area: " + figura.calcularArea());
+//		System.out.println("Perimetro: " + figura.calcularPerimetro());
+//		System.out.println();
+//		
+//		new FiguraBidimensional();
 		
 		//Shift + Alt + R
 		//Cuadrado

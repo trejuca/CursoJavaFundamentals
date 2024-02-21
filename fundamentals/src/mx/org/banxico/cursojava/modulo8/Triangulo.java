@@ -4,7 +4,21 @@ public class Triangulo extends FiguraBidimensional {
 
 	private double base;
 	private double altura;
-	//private double hipotenusa;
+
+	public Triangulo() {
+		super();
+	}	
+	
+	public Triangulo(double base, double altura) {
+		this.base = base;
+		this.altura = altura;
+	}
+
+	public Triangulo(double base, double altura, double area, double perimetro) {
+		super(area, perimetro);
+		this.base = base;
+		this.altura = altura;
+	}
 	
 	public double getBase() {
 		return base;

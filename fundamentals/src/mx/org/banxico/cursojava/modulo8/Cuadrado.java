@@ -4,6 +4,21 @@ public class Cuadrado extends FiguraBidimensional {
 
 	private double lado;
 
+	
+	public Cuadrado() {
+		super();
+	}
+
+	public Cuadrado(double lado) {
+		this.lado = lado;
+	}
+
+	public Cuadrado(double lado, double area, double perimetro) {
+		super(area, perimetro);
+		this.lado = lado;
+	}
+
+
 	public double getLado() {
 		return lado;
 	}

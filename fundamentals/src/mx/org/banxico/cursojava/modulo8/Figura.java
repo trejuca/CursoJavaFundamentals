@@ -1,17 +1,21 @@
 package mx.org.banxico.cursojava.modulo8;
 
-public class Figura {
+public abstract class Figura {
 
 	private double area;
 	private double perimetro;
 	
-	public double calcularArea() {
-		return 0.0;
+	public Figura() {
+		
 	}
 	
-	public double calcularPerimetro() {
-		return 0.0;
+	public Figura(double area, double perimetro) {
+		this.area = area;
+		this.perimetro = perimetro;
 	}
+
+	public  abstract double calcularArea();
+	public abstract double calcularPerimetro();
 	
 	public double getArea() {
 		return area;
@@ -26,9 +30,11 @@ public class Figura {
 		this.perimetro = perimetro;
 	}
 
-	@Override
-	public String toString() {
-		return "Figura [area=" + area + ", perimetro=" + perimetro + "]";
-	}
+	// No seria necesario el metodo toString en Figura
+	// ya que la clase esta marcada como Abstract 
+//	@Override
+//	public String toString() {
+//		return "Figura [area=" + area + ", perimetro=" + perimetro + "]";
+//	}
 	
 }

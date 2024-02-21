@@ -4,6 +4,19 @@ public class Circulo extends FiguraBidimensional {
 
 	private double radio;
 
+	public Circulo() {
+		super();
+	}
+	
+	public Circulo(double radio) {
+		this.radio = radio;
+	}
+
+	public Circulo(double radio, double area, double perimetro) {
+		super(area, perimetro);
+		this.radio = radio;
+	}
+
 	public double getRadio() {
 		return radio;
 	}

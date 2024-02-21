@@ -1,11 +1,12 @@
 package mx.org.banxico.cursojava.modulo8;
 
-public class FiguraBidimensional extends Figura {
+public abstract class FiguraBidimensional extends Figura {
 
-	@Override
-	public String toString() {
-		return "FiguraBidimensional [area = " + super.calcularArea() + ", " +
-				"perimetro = " + super.getPerimetro() + "]";
+	public FiguraBidimensional() {
+		super();
 	}
 
+	public FiguraBidimensional(double area, double perimetro) {
+		super(area, perimetro);
+	}
 }

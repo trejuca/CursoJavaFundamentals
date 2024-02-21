@@ -1,9 +1,11 @@
 package mx.org.banxico.cursojava.modulo4;
 
+import java.util.Comparator;
+
 // Javabeans
 // POJOs (Plain Old Java Object)
 // Entity
-public class Estudiante {
+public class Estudiante implements Comparator<Estudiante> {
 
 	public static final String NOMBRE_ESCUELA = "Escuela 5 de Mayo";
 	
@@ -89,5 +91,16 @@ public class Estudiante {
 	public String toString(String algo) {
 		return "Estudiante [matricula=" + matricula + ", nombre=" + nombre + ", primerApellido=" + primerApellido
 				+ ", edad=" + edad + ", calificacion=" + calificacion + "]";
+	}
+
+	@Override
+	public int compare(Estudiante o1, Estudiante o2) {
+		
+		int porCalificacion = Integer.compare(o1.getCalificacion(), o2.getCalificacion());
+		
+		if (porCalificacion == 0) {
+			return o1.getNombre().compareTo(o2.getNombre());
+		}
+		return porCalificacion;
 	}
 }
